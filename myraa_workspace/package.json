@@ -1,0 +1,8 @@
+{
+  "name": "myraa-workspace-project",
+  "version": "1.0.0",
+  "description": "A secure sandboxed project directory for terminal experiments",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

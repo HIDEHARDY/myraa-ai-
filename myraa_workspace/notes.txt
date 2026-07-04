@@ -1,0 +1,5 @@
+Important Notes:
+- Long-Term Memory Core is upgraded.
+- Visual HUD modulates under voice commands.
+- Interactive Terminal is powered by Node sandboxed container.
+- Chrome automation provides full headless page reads.
