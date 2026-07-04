@@ -1,0 +1,7 @@
+{
+  "name": "Myraa - AI Voice Assistant",
+  "description": "Real-time voice-to-voice futuristic AI assistant with ultra-low latency audio interaction, persistent long-term neural memory vault, dynamic waveform visualization, and tool calling.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
