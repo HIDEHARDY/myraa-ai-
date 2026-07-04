@@ -1,0 +1,54 @@
+[
+  {
+    "id": "mem_init_1",
+    "category": "Learned Facts",
+    "content": "Myraa is v3.1-LIVE real-time audio neural companion upgraded with expanded long-term persistent memory storage.",
+    "importance": "high",
+    "createdAt": 1783078602804,
+    "tags": [
+      "myraa",
+      "identity",
+      "memory",
+      "neural"
+    ]
+  },
+  {
+    "id": "mem_init_2",
+    "category": "Preferences",
+    "content": "Futuristic glowing holographic HUD interface with customizable color modulation and sound wave visualizer.",
+    "importance": "medium",
+    "createdAt": 1783121802804,
+    "tags": [
+      "hud",
+      "theme",
+      "ui",
+      "holographic"
+    ]
+  },
+  {
+    "id": "mem_init_3",
+    "category": "Projects",
+    "content": "Bidirectional voice-to-voice PCM streaming companion running in Cloud Run sandbox with low latency neural pipeline.",
+    "importance": "high",
+    "createdAt": 1783143402804,
+    "tags": [
+      "project",
+      "voice",
+      "streaming",
+      "pcm"
+    ]
+  },
+  {
+    "id": "mem_init_4",
+    "category": "Notes",
+    "content": "Long-Term Memory Upgrade installed. Capable of category filtering, importance ranking, search retrieval, deduplication, and JSON export/import.",
+    "importance": "high",
+    "createdAt": 1783161402804,
+    "tags": [
+      "upgrade",
+      "memory",
+      "viewer",
+      "storage"
+    ]
+  }
+]

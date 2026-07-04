@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Face Coordinate Picker</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #fff;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    #container {
+      position: relative;
+      cursor: crosshair;
+      border: 2px solid #333;
+    }
+    img {
+      display: block;
+      width: 768px;
+      height: 1024px;
+    }
+    #log {
+      margin-top: 20px;
+      font-size: 18px;
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      width: 800px;
+      text-align: left;
+    }
+    .marker {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click on the face features to get coordinates (768x1024)</h1>
+  <div id="container">
+    <img id="avatar" src="src/assets/images/myraa_avatar.png" />
+  </div>
+  <div id="log">Click on the image. Coordinates will appear here.</div>
+
+  <script>
+    const container = document.getElementById('container');
+    const log = document.getElementById('log');
+    let points = [];
+
+    container.addEventListener('click', (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = Math.round(e.clientX - rect.left);
+      const y = Math.round(e.clientY - rect.top);
+
+      points.push({ x, y });
+      
+      const marker = document.createElement('div');
+      marker.className = 'marker';
+      marker.style.left = x + 'px';
+      marker.style.top = y + 'px';
+      container.appendChild(marker);
+
+      log.innerHTML = '<h3>Clicked Points:</h3>' + 
+        points.map((p, i) => `Point ${i + 1}: x=${p.x}, y=${p.y}`).join('<br>') +
+        `<br><br>JSON: ` + JSON.stringify(points);
+    });
+  </script>
+</body>
+</html>
