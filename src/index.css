@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+/* ===== ROYAL DESIGN SYSTEM — SUHANI AI ===== */
+/* Color Palette: Royal Purple + Black + Electric Blue + Bright Gold */
+
+:root {
+  --royal-purple: #7B2FBE;
+  --royal-purple-light: #9B59B6;
+  --royal-purple-deep: #4A1080;
+  --royal-purple-glow: rgba(123, 47, 190, 0.5);
+
+  --electric-blue: #0047FF;
+  --electric-blue-bright: #1A78FF;
+  --electric-blue-neon: #00BFFF;
+  --electric-blue-glow: rgba(0, 71, 255, 0.5);
+
+  --bright-gold: #FFD700;
+  --bright-gold-warm: #FFC107;
+  --bright-gold-deep: #F5A623;
+  --bright-gold-glow: rgba(255, 215, 0, 0.4);
+
+  --void-black: #050508;
+  --deep-black: #08080F;
+  --rich-black: #0D0D1C;
+}
+
+/* ===== TYPOGRAPHY ===== */
+body {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono-royal {
+  font-family: 'Space Mono', monospace;
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* Original avatar animations */
+@keyframes anime-breath {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-1.2px) scale(1.005); }
+}
+
+@keyframes anime-eyes-glow {
+  0%, 100% { filter: drop-shadow(0 0 1px rgba(245, 158, 11, 0.4)); }
+  50% { filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.8)); }
+}
+
+@keyframes anime-cyber-eyes-glow {
+  0%, 100% { filter: drop-shadow(0 0 1px rgba(168, 85, 247, 0.4)); }
+  50% { filter: drop-shadow(0 0 5px rgba(168, 85, 247, 0.9)); }
+}
+
+@keyframes anime-hair-sway-left {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1.2deg); }
+}
+
+@keyframes anime-hair-sway-right {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-1.2deg); }
+}
+
+@keyframes anime-ear-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+/* NEW Premium Animations */
+@keyframes golden-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes electric-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--electric-blue-glow), 0 0 15px var(--electric-blue-glow), 0 0 30px rgba(0,71,255,0.2);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--electric-blue-glow), 0 0 30px var(--electric-blue-glow), 0 0 60px rgba(0,71,255,0.4);
+  }
+}
+
+@keyframes royal-breathe {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--royal-purple-glow), 0 0 60px rgba(123,47,190,0.2);
+    opacity: 0.8;
+  }
+  50% {
+    box-shadow: 0 0 40px var(--royal-purple-glow), 0 0 100px rgba(123,47,190,0.35);
+    opacity: 1;
+  }
+}
+
+@keyframes gold-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px var(--bright-gold-glow), 0 0 15px rgba(255,215,0,0.2);
+  }
+  50% {
+    text-shadow: 0 0 15px var(--bright-gold-glow), 0 0 35px rgba(255,215,0,0.5);
+  }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes border-flow {
+  0% { border-color: var(--royal-purple); }
+  33% { border-color: var(--electric-blue); }
+  66% { border-color: var(--bright-gold); }
+  100% { border-color: var(--royal-purple); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float-up {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes holo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+.anime-breathing {
+  animation: anime-breath 4.5s ease-in-out infinite;
+  transform-origin: 100px 150px;
+}
+
+.anime-glowing-eyes {
+  animation: anime-eyes-glow 3s ease-in-out infinite;
+}
+
+.anime-cyber-glowing-eyes {
+  animation: anime-cyber-eyes-glow 2s ease-in-out infinite;
+}
+
+.anime-hair-left {
+  animation: anime-hair-sway-left 6s ease-in-out infinite;
+  transform-origin: 52px 80px;
+}
+
+.anime-hair-right {
+  animation: anime-hair-sway-right 6s ease-in-out infinite;
+  animation-delay: -3s;
+  transform-origin: 148px 80px;
+}
+
+.anime-ear-l {
+  animation: anime-ear-wiggle 7s ease-in-out infinite;
+  transform-origin: 52px 98px;
+}
+
+.anime-ear-r {
+  animation: anime-ear-wiggle 7s ease-in-out infinite;
+  animation-delay: -3.5s;
+  transform-origin: 148px 98px;
+}
+
+/* Golden shimmer text */
+.text-golden-shimmer {
+  background: linear-gradient(
+    90deg,
+    #FFD700 0%,
+    #FFC107 20%,
+    #fff8dc 40%,
+    #FFD700 60%,
+    #F5A623 80%,
+    #FFD700 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: golden-shimmer 4s linear infinite;
+}
+
+/* Royal purple glass panels */
+.glass-royal {
+  background: rgba(123, 47, 190, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(123, 47, 190, 0.3);
+}
+
+/* Electric blue glass panels */
+.glass-electric {
+  background: rgba(0, 71, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 71, 255, 0.3);
+}
+
+/* Golden glass panels */
+.glass-gold {
+  background: rgba(255, 215, 0, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+/* Royal glow button */
+.btn-royal {
+  background: linear-gradient(135deg, #7B2FBE, #4A1080);
+  border: 1px solid rgba(155, 89, 182, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-royal:hover {
+  background: linear-gradient(135deg, #9B59B6, #6C3483);
+  box-shadow: 0 0 20px rgba(123,47,190,0.5), 0 0 40px rgba(123,47,190,0.2);
+}
+
+/* Electric glow button */
+.btn-electric {
+  background: linear-gradient(135deg, #0047FF, #003ACC);
+  border: 1px solid rgba(0, 71, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-electric:hover {
+  box-shadow: 0 0 20px rgba(0,71,255,0.5), 0 0 40px rgba(0,71,255,0.2);
+}
+
+/* Electric pulse glow */
+.glow-electric {
+  animation: electric-pulse 2s ease-in-out infinite;
+}
+
+/* Royal breathe glow */
+.glow-royal {
+  animation: royal-breathe 3s ease-in-out infinite;
+}
+
+/* Gold glow text */
+.glow-gold {
+  animation: gold-glow 2.5s ease-in-out infinite;
+}
+
+/* Animate fade in */
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+/* Float animation */
+.animate-float {
+  animation: float-up 4s ease-in-out infinite;
+}
